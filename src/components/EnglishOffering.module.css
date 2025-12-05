@@ -1,0 +1,53 @@
+.section {
+    padding: 4rem 2rem;
+    background-color: #E8C547;
+    /* Accent color for distinction */
+    color: var(--secondary);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background-color: #000;
+}
