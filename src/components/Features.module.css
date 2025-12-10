@@ -1,6 +1,6 @@
 .features {
     padding: 4rem 2rem;
-    background-color: white;
+    background-color: var(--background);
     text-align: center;
 }
 

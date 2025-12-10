@@ -17,7 +17,6 @@ export async function POST(request: Request) {
                 email: body.email,
                 whatsapp: body.whatsapp,
                 arrival_date: body.arrival_date,
-                english_level: body.english_level,
                 priority_topic: body.priority_topic,
                 source: 'landing_page'
             }

@@ -11,7 +11,14 @@
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    color: var(--text);
+    /* Force dark text because background is white, regardless of theme */
+    color: #333333;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
 }
 
 .heading {

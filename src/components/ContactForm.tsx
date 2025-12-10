@@ -9,7 +9,6 @@ export default function ContactForm() {
         email: '',
         whatsapp: '',
         arrival_date: '',
-        english_level: 'Beginner',
         priority_topic: 'All'
     })
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -32,7 +31,7 @@ export default function ContactForm() {
             if (!res.ok) throw new Error('Failed to submit')
 
             setStatus('success')
-            setFormData({ name: '', email: '', whatsapp: '', arrival_date: '', english_level: 'Beginner', priority_topic: 'All' })
+            setFormData({ name: '', email: '', whatsapp: '', arrival_date: '', priority_topic: 'All' })
         } catch (error) {
             console.error(error)
             setStatus('error')
@@ -66,26 +65,14 @@ export default function ContactForm() {
                         <input type="text" id="arrival_date" name="arrival_date" required value={formData.arrival_date} onChange={handleChange} placeholder="e.g., Dec 10 - Dec 20" />
                     </div>
 
-                    <div className={styles.row}>
-                        <div className={styles.group}>
-                            <label htmlFor="english_level">English Level</label>
-                            <select id="english_level" name="english_level" value={formData.english_level} onChange={handleChange}>
-                                <option value="Beginner">Beginner</option>
-                                <option value="Intermediate">Intermediate</option>
-                                <option value="Advanced">Advanced</option>
-                                <option value="Native">Native</option>
-                            </select>
-                        </div>
-
-                        <div className={styles.group}>
-                            <label htmlFor="priority_topic">Priority Topic</label>
-                            <select id="priority_topic" name="priority_topic" value={formData.priority_topic} onChange={handleChange}>
-                                <option value="All">All Basics</option>
-                                <option value="Taxi">Taxi & Transport</option>
-                                <option value="Food">Food & Dining</option>
-                                <option value="Emergency">Emergencies</option>
-                            </select>
-                        </div>
+                    <div className={styles.group}>
+                        <label htmlFor="priority_topic">Priority Topic</label>
+                        <select id="priority_topic" name="priority_topic" value={formData.priority_topic} onChange={handleChange}>
+                            <option value="All">All Basics</option>
+                            <option value="Taxi">Taxi & Transport</option>
+                            <option value="Food">Food & Dining</option>
+                            <option value="Emergency">Emergencies</option>
+                        </select>
                     </div>
 
                     <button type="submit" className={styles.submitBtn} disabled={status === 'loading' || status === 'success'}>
