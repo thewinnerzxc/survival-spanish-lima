@@ -1,0 +1,39 @@
+:root {
+  --primary: #D94625;
+  /* Keep Brand Red */
+  --secondary: #1B4332;
+  /* Dark Forest Green for headings/accents */
+  --accent: #E8C547;
+  --background: #F8F9FA;
+  /* Subtle Grey */
+  --text: #2D3E36;
+  /* Dark Green-Gray for text */
+  --text-on-secondary: #FFFFFF;
+  --text-on-secondary-muted: #E0E0E0;
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
